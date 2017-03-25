@@ -32,7 +32,7 @@ module.exports.routes = {
   *                                                                          *
   ***************************************************************************/
 
-  '/': 'IndexController.index',
+  'GET /': 'IndexController.index',
   '/static/*': function(req, res) {
 
     var assetPath = req.params[0];
