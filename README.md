@@ -8,4 +8,4 @@ More to come...
 - ~~move frontend routes logic to index controller~~
 - implement redux stores
 - implement REST API with Sails policies and JWT
-- implement frontend routing with React Router
+- ~~implement frontend routing with React Router~~

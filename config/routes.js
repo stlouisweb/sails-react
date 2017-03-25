@@ -32,7 +32,7 @@ module.exports.routes = {
   *                                                                          *
   ***************************************************************************/
 
-  'GET /': 'IndexController.index',
+
   '/static/*': function(req, res) {
 
     var assetPath = req.params[0];
@@ -41,7 +41,8 @@ module.exports.routes = {
     var dirPath = pathArr.join('/');
     return res.sendfile(dirPath + '/frontend/build/static/' + assetPath);
 
-  }
+  },
+    '/*': 'IndexController.index'
 
 
   /***************************************************************************
