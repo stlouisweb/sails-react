@@ -32,12 +32,7 @@ module.exports.routes = {
   *                                                                          *
   ***************************************************************************/
 
-  '/': function(req, res) {
-    var pathArr = __dirname.split('/');
-    pathArr.pop();
-    var dirPath = pathArr.join('/');
-    return res.sendfile(dirPath + '/frontend/build/index.html');
-  },
+  '/': 'IndexController.index',
   '/static/*': function(req, res) {
 
     var assetPath = req.params[0];
