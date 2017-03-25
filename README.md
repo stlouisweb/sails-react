@@ -1,3 +1,4 @@
-# test-project
+# Sails + React
 
-a [Sails](http://sailsjs.org) application
+This app was created with the Sails CLI and create-react-app generator, and some routes trickery.    
+More to come...
