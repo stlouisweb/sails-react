@@ -5,7 +5,7 @@ More to come...
 
 ## TODO
 
-- move frontend routes logic to index controller
+- ~~move frontend routes logic to index controller~~
 - implement redux stores
 - implement REST API with Sails policies and JWT
 - implement frontend routing with React Router
