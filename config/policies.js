@@ -29,6 +29,9 @@ module.exports.policies = {
   },
   'IndexController': {
     '*': true
+  },
+  'ThingsController': {
+    '*': true
   }
 
   /***************************************************************************
