@@ -3,3 +3,21 @@ body {
   padding: 0;
   font-family: sans-serif;
 }
+
+form {
+  width: 264px;
+  margin: 0px auto;
+  text-align: left;
+}
+
+form label {
+  text-align: left
+}
+
+form input#email {
+  margin-left: 20px;
+}
+
+form input#password {
+  margin-left: 53px;
+}

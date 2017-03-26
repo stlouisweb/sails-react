@@ -2,6 +2,8 @@ import React, { Component } from 'react';
 import { BrowserRouter as Router, Route, NavLink } from 'react-router-dom';
 import logo from './logo.svg';
 import './App.css';
+import SignUp from './components/Auth/SignUp.js';
+import SignIn from './components/Auth/SignIn.js';
 
 class Home extends Component {
   render() {
@@ -39,11 +41,15 @@ class App extends Component {
       <Router>
         <div>
           <nav>
-            <NavLink exact activeClassName="active" to="/">Home</NavLink>
-            <NavLink to ={{pathname: '/test'}}>Test</NavLink>
+            <NavLink exact activeClassName="active" to="/">Home</NavLink><br/>
+            <NavLink to ={{pathname: '/test'}}>Test</NavLink><br/>
+            <NavLink to ={{pathname: '/sign-up'}}>Sign Up</NavLink><br/>
+            <NavLink to ={{pathname: '/sign-in'}}>Sign In</NavLink>
           </nav>
           <Route exact path="/" component={Home} />
           <Route path="/test" component={Test} />
+          <Route path="/sign-up" component={SignUp} />
+          <Route path="/sign-in" component={SignIn} />
         </div>
       </Router>
     )
