@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { BrowserRouter as Router, Route } from 'react-router-dom';
+import { BrowserRouter as Router, Route, NavLink } from 'react-router-dom';
 import logo from './logo.svg';
 import './App.css';
 
@@ -38,6 +38,10 @@ class App extends Component {
     return(
       <Router>
         <div>
+          <nav>
+            <NavLink exact activeClassName="active" to="/">Home</NavLink>
+            <NavLink to ={{pathname: '/test'}}>Test</NavLink>
+          </nav>
           <Route exact path="/" component={Home} />
           <Route path="/test" component={Test} />
         </div>

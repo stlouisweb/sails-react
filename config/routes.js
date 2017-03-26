@@ -20,7 +20,7 @@
  * http://sailsjs.org/#!/documentation/concepts/Routes/RouteTargetSyntax.html
  */
 
-module.exports.routes = {
+var routes = {
 
   /***************************************************************************
   *                                                                          *
@@ -32,7 +32,6 @@ module.exports.routes = {
   *                                                                          *
   ***************************************************************************/
 
-
   '/static/*': function(req, res) {
 
     var assetPath = req.params[0];
@@ -41,8 +40,7 @@ module.exports.routes = {
     var dirPath = pathArr.join('/');
     return res.sendfile(dirPath + '/frontend/build/static/' + assetPath);
 
-  },
-    '/*': 'IndexController.index'
+  }
 
 
   /***************************************************************************
@@ -56,3 +54,12 @@ module.exports.routes = {
   ***************************************************************************/
 
 };
+// the same app will be rendered at all these routes
+var indexRoutes = ['/',
+  '/test'];
+indexRoutes.forEach(function (r) {
+  routes['GET ' + r] = 'IndexController.index';
+});
+
+
+module.exports.routes = routes;
