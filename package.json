@@ -35,5 +35,9 @@
     "url": "git://github.com/jeremyplack/test-project.git"
   },
   "author": "jeremyplack",
-  "license": ""
+  "license": "",
+  "devDependencies": {
+    "eslint": "^3.18.0",
+    "eslint-plugin-react": "^6.10.3"
+  }
 }
